@@ -1,6 +1,6 @@
 {
   "name": "ember-html-table-to-excel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ember addon that converts html tables to excel documents",
   "keywords": [
     "ember-addon",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "6.16.0",
+    "ember-cli-data-export-with-style": "3.1.2",
     "ember-cli-htmlbars": "3.0.0"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "broccoli-asset-rev": "2.7.0",
     "ember-ajax": "3.1.0",
     "ember-cli": "3.5.0",
-    "ember-cli-data-export-with-style": "3.1.2",
     "ember-cli-dependency-checker": "3.0.0",
     "ember-cli-eslint": "4.2.3",
     "ember-cli-htmlbars-inline-precompile": "1.0.3",
