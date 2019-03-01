@@ -8,10 +8,6 @@ module.exports = {
   },
   hintingEnabled: function() {
     return false;
-  },
-
-  included: function(app) {
-    this._super.included.apply(this, arguments);
-  },
-
+  }
+  
 };
