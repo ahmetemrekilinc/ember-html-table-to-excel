@@ -65,11 +65,20 @@ export default Service.extend({
         }
         if(!isToBeIgnored){
           let cellObject;
+          let valueInCell = cell.innerText;
+          let inputComponent = $(cell).find("input");
+          if(inputComponent.length === 1){
+            valueInCell = inputComponent[0].value;
+          }
+          let textareaComponent = $(cell).find("textarea");
+          if(textareaComponent.length === 1){
+            valueInCell = textareaComponent[0].value;
+          }
           if($(cell).hasClass("export-as-string")){
-            cellObject = {t: 's', v: cell.innerText}
+            cellObject = {t: 's', v: valueInCell}
           }
           else{
-            cellObject = cell.innerText;
+            cellObject = valueInCell;
           }
           dataRow.pushObject(cellObject);
           let colSpan = $(cell).prop("colSpan") || 1;

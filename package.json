@@ -1,6 +1,6 @@
 {
   "name": "ember-html-table-to-excel",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Ember addon that converts html tables to excel documents",
   "keywords": [
     "ember-addon",
