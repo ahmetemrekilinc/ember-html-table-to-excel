@@ -1,6 +1,6 @@
 {
   "name": "ember-html-table-to-excel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ember addon that converts html tables to excel documents",
   "keywords": [
     "ember-addon",
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "7.5.0",
-    "ember-cli-data-export-with-style": "3.2.0",
+    "ember-cli-data-export-with-style": "3.2.1",
     "ember-cli-htmlbars": "3.0.0"
   },
   "devDependencies": {
