@@ -3252,10 +3252,10 @@ ember-cli-broccoli-sane-watcher@^3.0.0:
     rsvp "^3.0.18"
     sane "^4.0.0"
 
-ember-cli-data-export-with-style@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-data-export-with-style/-/ember-cli-data-export-with-style-3.3.0.tgz#9b120c20ebc9d6ce95af6694f3224385b6e03d07"
-  integrity sha512-PgP1ma4Eb18prikYTVSNuLlbsJlahf0KWfTFrlfb1C4HKWEuPLobTfosfM+YjdRJc9dggeD6Kh0DW8sgNcKiUA==
+ember-cli-data-export-with-style@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-data-export-with-style/-/ember-cli-data-export-with-style-4.0.1.tgz#c2a0be0f1fe0212e8601af1c59732c8eda2c4096"
+  integrity sha512-LA/LdstuoogFW/JiM+nFV5qPfwOdPNrFeWeoe8UcF+Wykok9nbqSzNgooJmsthJArxFdHz/MuL6sOEsUDvlpMQ==
   dependencies:
     ember-cli-babel "7.7.3"
     ember-cli-htmlbars "3.0.1"
