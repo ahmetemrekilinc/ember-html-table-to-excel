@@ -1,12 +1,12 @@
 <!-- //BEGIN-SNIPPET showcase -->
 <div>
   <br>
-  File Name: <Input @value={{fileName}} />
-  Sheet Name: <Input @value={{sheetName}} />
-  Header Rows: <Input @value={{headerRows}} @placeholder={{"eg: [0, 1]"}} />
+  File Name: <Input @value={{this.fileName}} />
+  Sheet Name: <Input @value={{this.sheetName}} />
+  Header Rows: <Input @value={{this.headerRows}} @placeholder={{"eg: [0, 1]"}} />
 
   <EmberHtmlTableToExcelButton type="button" @content="Export Table to Excel" @tableId="my-custom-html-table-id"
-                               @fileName={{fileName}} @sheetName={{sheetName}} @headerRows={{headerRows}} />
+                               @fileName={{this.fileName}} @sheetName={{this.sheetName}} @headerRows={{this.headerRows}} />
 
   <br><br>
   <table id="my-custom-html-table-id" >
@@ -62,7 +62,7 @@
     </tr>
     </thead>
     <tbody>
-    {{#each data as |row|}}
+    {{#each this.data as |row|}}
       <tr>
         <td class="export-ignore" >
           <input type="checkbox" >
