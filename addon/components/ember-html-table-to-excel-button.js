@@ -1,24 +1,24 @@
-import Component from '@ember/component';
-import { set } from '@ember/object';
+import Component from '@glimmer/component';
+import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
-export default Component.extend({
-  tagName:'button',
-  attributeBindings:['disabled', 'title', 'type', 'data-toggle'],
-  classNames: ["ember-html-table-to-excel-button"],
+export default class EmberHtmlTableToExcelButton extends Component {
 
-  click(){
-    let tableId = this.get("tableId");
-    let fileName = this.get("fileName");
-    let sheetName = this.get("sheetName");
-    let headerRows = this.get("headerRows");
+  @service htmlTableToExcel;
+
+  @action
+  exportExcel(){
+    let tableId = this.args.tableId;
+    let headerRows = this.args.headerRows;
+
     let exportOptions = {
-      fileName: fileName,
-      sheetName: sheetName
+      fileName: this.args.fileName,
+      sheetName: this.args.sheetName
     };
     if(headerRows){
-      set(exportOptions, 'headerRows', headerRows);
+      exportOptions.headerRows = headerRows;
     }
-    this.get('htmlTableToExcel').exportExcelFromTableId(tableId, exportOptions);
+    this.htmlTableToExcel.exportExcelFromTableId(tableId, exportOptions);
   }
 
-});
+}

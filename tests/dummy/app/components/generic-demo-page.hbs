@@ -1,0 +1,29 @@
+<div>
+  <b>{{@name}}</b>
+
+  <button {{on "click" this.toggleCollapse}} >
+    {{#if this.collapsed}}
+      Show Source Code
+    {{else}}
+      Hide Source Code
+    {{/if}}
+  </button>
+
+  <BsCollapse @collapsed={{this.collapsed}}>
+    <div class="well">
+      <BsTab as |bt|>
+        {{#each this.filesToDisplay as |file|}}
+          <bt.pane @title={{file}}>
+            {{#let (get-code-snippet file unindent=false) as |snippet|}}
+              <CodeBlock @language="javascript" >{{snippet.source}}</CodeBlock>
+            {{/let}}
+          </bt.pane>
+        {{/each}}
+      </BsTab>
+    </div>
+  </BsCollapse>
+
+  <br>
+  {{yield}}
+  <br>
+</div>
