@@ -1,106 +1,14 @@
-<h1>ember-html-to-excel</h1>
+<div class="ember-view">
+  <ul class="app-tab">
+    <li class="app-tab-item"><a href="https://github.com/ahmetemrekilinc/ember-html-table-to-excel" target="_blank" rel="noopener noreferrer">Github</a></li>
+    <li class="app-tab-item"><a href="https://www.npmjs.com/package/ember-html-table-to-excel" target="_blank" rel="noopener noreferrer">Npmjs</a></li>
+    <li class="app-tab-item"><a href="https://github.com/ahmetemrekilinc/ember-cli-data-export" target="_blank" rel="noopener noreferrer">ember-cli-data-export-with-style</a></li>
+  </ul>
 
-File Name: {{input value=fileName }}
-Sheet Name: {{input value=sheetName }}
-Header Rows: {{input value=headerRows placeholder="eg: [0, 1]" }}
+  <h1>ember-html-table-to-excel</h1>
+  <GenericDemoPage @name='Example Usage of Ember Html Table to Excel' @files='showcase.hbs,showcase.js'>
+    <Showcase/>
+  </GenericDemoPage>
 
-{{#ember-html-table-to-excel-button
-  tableId="my-custom-html-table-id"
-  fileName=fileName
-  sheetName=sheetName
-  headerRows=headerRows
-}}
-  Export to Excel
-{{/ember-html-table-to-excel-button}}
-
-<table id="my-custom-html-table-id" >
-  <thead>
-    <tr>
-      <th colspan="5" >
-        colspan 1
-      </th>
-      <th colspan="6" >
-        colspan 2
-      </th>
-    </tr>
-    <tr>
-      <th class="export-ignore" >
-        <input type="checkbox" >
-      </th>
-      <th>
-        Text Prop
-      </th>
-      <th>
-        Number Prop
-      </th>
-      <th>
-        Decimal Number Prop
-      </th>
-      <th>
-        Numeric but String Prop
-      </th>
-      <th>
-        Date Prop
-      </th>
-      <th class="export-ignore" >
-        Ignoreable Column
-      </th>
-      <th>
-        Money Prop TRY
-      </th>
-      <th>
-        Money Prop USD
-      </th>
-      <th>
-        Money Prop EUR
-      </th>
-      <th>
-        Money Prop GBP
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="export-ignore" >
-        <input type="checkbox" >
-      </td>
-      <td>  dummydata 1 </td>
-      <td>        128.101.733</td>
-      <td >        9.080.119,27</td>
-      <td class="export-as-string" >        9080119.27  </td>
-      <td >        27.02.2019  </td>
-      <td class="export-ignore" >
-        Ignoreable Data 1
-      </td>
-      <td >        1.371.699,47₺  </td>
-      <td >        $4,929,359.43  </td>
-      <td >        49.543,21€  </td>
-      <td >        £4,828,816.67</td>
-    </tr>
-    <tr>
-      <td class="export-ignore" >
-        <input type="checkbox" >
-      </td>
-      <td>  dummydata 2 </td>
-      <td>        853      </td>
-      <td >        349,27</td>
-      <td class="export-as-string" >        34927  </td>
-      <td >        04.11.1998  </td>
-      <td class="export-ignore" >
-        Ignoreable Data 2
-      </td>
-      <td >        99,47₺  </td>
-      <td >        $29.43  </td>
-      <td >        43,21€  </td>
-      <td >        £16.67</td>
-    </tr>
-  </tbody>
-</table>
-
-<style>
-  table, tr, th, td {
-    border: 1px solid black;
-  }
-</style>
-
-{{outlet}}
+  {{outlet}}
+</div>

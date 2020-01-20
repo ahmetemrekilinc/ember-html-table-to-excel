@@ -1,0 +1,95 @@
+<!-- //BEGIN-SNIPPET showcase -->
+<div>
+  <br>
+  File Name: <Input @value={{fileName}} />
+  Sheet Name: <Input @value={{sheetName}} />
+  Header Rows: <Input @value={{headerRows}} @placeholder={{"eg: [0, 1]"}} />
+
+  <EmberHtmlTableToExcelButton type="button" @content="Export Table to Excel" @tableId="my-custom-html-table-id"
+                               @fileName={{fileName}} @sheetName={{sheetName}} @headerRows={{headerRows}} />
+
+  <br><br>
+  <table id="my-custom-html-table-id" >
+    <thead>
+    <tr>
+      <th colspan="5" >
+        colspan 1
+      </th>
+      <th colspan="8" >
+        colspan 2
+      </th>
+    </tr>
+    <tr>
+      <th class="export-ignore" >
+        <input type="checkbox" >
+      </th>
+      <th>
+        Text Prop
+      </th>
+      <th>
+        Number Prop
+      </th>
+      <th>
+        Decimal Number Prop
+      </th>
+      <th>
+        Numeric but String Prop
+      </th>
+      <th>
+        Date Prop
+      </th>
+      <th class="export-ignore" >
+        Ignoreable Column
+      </th>
+      <th>
+        Money Prop TRY
+      </th>
+      <th>
+        Money Prop USD
+      </th>
+      <th>
+        Money Prop EUR
+      </th>
+      <th>
+        Money Prop GBP
+      </th>
+      <th>
+        Input
+      </th>
+      <th>
+        Textarea
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each data as |row|}}
+      <tr>
+        <td class="export-ignore" >
+          <input type="checkbox" >
+        </td>
+        <td>{{row.textProp}}</td>
+        <td>{{row.formattedNumberProp}}</td>
+        <td>{{row.decimalNumberProp}}</td>
+        <td class="export-as-string" >{{row.numericButStringProp}}</td>
+        <td>{{row.dateProp}}</td>
+        <td class="export-ignore" >
+          {{row.ignorableProp}}
+        </td>
+        <td>{{row.moneyPropTRY}}</td>
+        <td>{{row.moneyPropUSD}}</td>
+        <td>{{row.moneyPropEUR}}</td>
+        <td>{{row.moneyPropGBP}}</td>
+        <td><Input @value={{row.inputProp}} /></td>
+        <td><Textarea @value={{row.textareaProp}} /></td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>
+<style>
+  table, tr, th, td {
+    border: 1px solid black;
+  }
+</style>
+
+<!-- //END-SNIPPET -->

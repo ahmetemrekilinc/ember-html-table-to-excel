@@ -4,9 +4,9 @@ import { isBlank } from '@ember/utils';
 import { assert } from '@ember/debug';
 import $ from 'jquery';
 
-export default Service.extend({
+export default class HtmlTableToExcelService extends Service {
 
-  excel: service(),
+  @service excel;
 
   exportExcelFromTableId(tableId, exportOptions = {}){
     if(isBlank(tableId)){
@@ -115,4 +115,4 @@ export default Service.extend({
 
   }
 
-});
+}
