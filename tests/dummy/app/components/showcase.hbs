@@ -5,7 +5,7 @@
   Sheet Name: <Input @value={{this.sheetName}} />
   Header Rows: <Input @value={{this.headerRows}} @placeholder={{"eg: [0, 1]"}} />
 
-  <EmberHtmlTableToExcelButton type="button" @content="Export Table to Excel" @tableId="my-custom-html-table-id"
+  <EmberHtmlTableToExcelButton type="button" @content='Export Table to Excel <i class="far fa-file-excel"></i>' @tableId="my-custom-html-table-id"
                                @fileName={{this.fileName}} @sheetName={{this.sheetName}} @headerRows={{this.headerRows}} />
 
   <br><br>
