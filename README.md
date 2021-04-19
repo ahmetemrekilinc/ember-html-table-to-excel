@@ -26,8 +26,8 @@ you need to import following 4 javascript files directly from the imported addon
   included: function(app) {
     this._super.included(app);
     app.import('node_modules/ember-cli-data-export-with-style/vendor/Blob.js');
-    app.import('node_modules/ember-cli-data-export-with-style/vendor/FileSaver-1.3.3.js');
-    app.import('node_modules/ember-cli-data-export-with-style/vendor/jszip-0.10.8.js');
+    app.import('node_modules/ember-cli-data-export-with-style/vendor/FileSaver.js');
+    app.import('node_modules/ember-cli-data-export-with-style/vendor/jszip.min.js');
     app.import('node_modules/ember-cli-data-export-with-style/vendor/xlsx.core.min.js');
   }
 ```
